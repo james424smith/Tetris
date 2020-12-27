@@ -1,5 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import styled from 'styled-components';
+
+const Title = styled.h1`
+  color: red;
+`;
 
 export default function Home() {
   return (
@@ -9,10 +14,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+      {/* <main className={styles.main}>
+        <Title className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        </Title>
 
         <p className={styles.description}>
           Get started by editing{' '}
@@ -59,7 +64,7 @@ export default function Home() {
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
-      </footer>
+      </footer> */}
     </div>
   )
 }
