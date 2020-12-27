@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import styled from 'styled-components';
 import GridSquare from './../components/GridSquare';
+import GridBoard from '../components/GridBoard';
 
 const AppHeader = styled.h1`
   background-color: #282c34;
@@ -18,7 +19,7 @@ function MyApp() {
   return (
     <div className="App">
       <AppHeader>Test Redux</AppHeader>
-      <GridSquare color="1" />
+      <GridBoard />
     </div>
   );
 }
