@@ -34,10 +34,6 @@ const App = styled.div`
                        "l c r"
                        ". b .";
 `;
-/* This defines the areas on the grid with names: 'h', 'l', 'c', 'r',
-and 'b'. The '.' represents an empty cell on the grid. */
-/* Defines three rows of `100px`, `--grid-height`, and 100px. */
-/* Defines three columns of `--col-side`, `--col-center`, and `--col-side` widths. */
 
 function MyApp() {
   return (
@@ -49,9 +45,5 @@ function MyApp() {
     </App>
   );
 }
-
-// function MyApp({ Component, pageProps }) {
-//   return <Component {...pageProps} />
-// }
 
 export default MyApp
