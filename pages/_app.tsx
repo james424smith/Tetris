@@ -5,6 +5,7 @@ import GridBoard from '../components/GridBoard';
 import NextBlock from './../components/NextBlock';
 import ScoreBoard from '../components/ScoreBoard';
 import Controls from '../components/Controls';
+import MessagePopup from '../components/MessagePopup';
 
 const AppHeader = styled.h1`
   background-color: #282c34;
@@ -44,6 +45,7 @@ function MyApp() {
       <NextBlock />
       <ScoreBoard />
       <Controls />
+      <MessagePopup />
     </App>
   );
 }
