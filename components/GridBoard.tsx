@@ -9,6 +9,7 @@ const MainBoard = styled.div`
   grid-template-columns: repeat(var(--cols), var(--tile-size));
   grid-gap: 0;
   align-self: flex-start;
+  grid-area: c;
 `;
 
 export default function GridBoard(props) {

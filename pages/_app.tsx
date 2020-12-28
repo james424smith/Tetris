@@ -15,16 +15,38 @@ const AppHeader = styled.h1`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  grid-area: h;
 `;
+
+const App = styled.div`
+  --col-side: calc(var(--tile-size) * 4);
+  --col-center: calc(var(--tile-size) * 10);
+  --grid-height: calc(var(--tile-size) * 18);
+  width: calc(var(--tile-size) * (4 + 1 + 10 + 1 + 4));
+  margin: auto;
+  display: grid;
+
+  grid-gap: var(--tile-size) var(--tile-size);
+  grid-template-columns: var(--col-side) var(--col-center) var(--col-side);
+  grid-template-rows: 100px var(--grid-height) 100px;
+
+  grid-template-areas: "h h h"
+                       "l c r"
+                       ". b .";
+`;
+/* This defines the areas on the grid with names: 'h', 'l', 'c', 'r',
+and 'b'. The '.' represents an empty cell on the grid. */
+/* Defines three rows of `100px`, `--grid-height`, and 100px. */
+/* Defines three columns of `--col-side`, `--col-center`, and `--col-side` widths. */
 
 function MyApp() {
   return (
-    <div className="App">
+    <App>
       <AppHeader>Test Redux</AppHeader>
       <GridBoard />
       <NextBlock />
       <ScoreBoard />
-    </div>
+    </App>
   );
 }
 

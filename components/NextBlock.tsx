@@ -6,6 +6,7 @@ const NBlock = styled.div`
   display: grid;
   grid-template-columns: repeat(4, var(--tile-size));
   align-self: flex-start;
+  grid-area: l;
 `;
 // Draws the "next" block view showing the next block to drop
 export default function NextBlock(props) {

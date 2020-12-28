@@ -13,15 +13,19 @@ const Button = styled.button`
   color: white;
 `;
 
+const ScoreWrapper = styled.div`
+  grid-area: r;
+`;
+
 export default function ScoreBoard(props) {
     return (
-        <div className="score-board">
+        <ScoreWrapper>
             <div>Score:{ props.score }</div>
             <div>Level: 1</div>
             <Button className="score-board-button" onClick={(e) => {
             }}>Play</Button>
             <Button className="score-board-button" onClick={(e) => {
             }}>Restart</Button>
-        </div>
+        </ScoreWrapper>
     )
 }
