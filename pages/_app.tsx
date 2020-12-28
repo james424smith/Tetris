@@ -4,6 +4,7 @@ import GridSquare from './../components/GridSquare';
 import GridBoard from '../components/GridBoard';
 import NextBlock from './../components/NextBlock';
 import ScoreBoard from '../components/ScoreBoard';
+import Controls from '../components/Controls';
 
 const AppHeader = styled.h1`
   background-color: #282c34;
@@ -42,6 +43,7 @@ function MyApp() {
       <GridBoard />
       <NextBlock />
       <ScoreBoard />
+      <Controls />
     </App>
   );
 }

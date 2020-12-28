@@ -2,19 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
-  background-color: #282c34;
-  min-height: 10vh;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: block;
+  padding: 1em;
+  border-width: 5px;
+  border-top-color: var(--button-color-t);
+  border-left-color: var(--button-color-l);
+  border-right-color: var(--button-color-r);
+  border-bottom-color: var(--button-color-b);
 `;
 
 const ScoreWrapper = styled.div`
   grid-area: r;
+  text-align: center;
 `;
 
 export default function ScoreBoard(props) {
