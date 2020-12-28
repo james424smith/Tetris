@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import styled from 'styled-components';
 import GridSquare from './../components/GridSquare';
 import GridBoard from '../components/GridBoard';
+import NextBlock from './../components/NextBlock';
 
 const AppHeader = styled.h1`
   background-color: #282c34;
@@ -20,6 +21,7 @@ function MyApp() {
     <div className="App">
       <AppHeader>Test Redux</AppHeader>
       <GridBoard />
+      <NextBlock />
     </div>
   );
 }
