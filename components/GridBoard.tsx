@@ -27,7 +27,7 @@ export default function GridBoard(props) {
   // The components generated in makeGrid are rendered in div.grid-board
 
     return (
-        <MainBoard className='grid-board'>
+        <MainBoard>
             {grid}
         </MainBoard>
     )
