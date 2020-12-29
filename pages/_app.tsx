@@ -1,6 +1,9 @@
 import '../styles/globals.css'
 import styled from 'styled-components';
-import GridSquare from './../components/GridSquare';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import reducers from './../redux/reducers/index';
+
 import GridBoard from '../components/GridBoard';
 import NextBlock from './../components/NextBlock';
 import ScoreBoard from '../components/ScoreBoard';
@@ -37,16 +40,20 @@ const App = styled.div`
                        ". b .";
 `;
 
+const store = createStore(reducers)
+
 function MyApp() {
   return (
-    <App>
-      <AppHeader>Test Redux</AppHeader>
-      <GridBoard />
-      <NextBlock />
-      <ScoreBoard />
-      <Controls />
-      <MessagePopup />
-    </App>
+    <Provider store={store}>
+      <App>
+        <AppHeader>Test Redux</AppHeader>
+        <GridBoard />
+        <NextBlock />
+        <ScoreBoard />
+        <Controls />
+        <MessagePopup />
+      </App>
+    </Provider>
   );
 }
 
