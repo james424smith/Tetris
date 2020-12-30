@@ -15,9 +15,9 @@ const MsgPopupWrapper = styled.div`
 // Displays a message
 export default function MessagePopup(props) {
   return (
-    <MsgPopupWrapper>
+    <div className='msgBox'>
       <h1>Message Title</h1>
       <p>Message info...</p>
-    </MsgPopupWrapper>
+    </div>
   )
 }

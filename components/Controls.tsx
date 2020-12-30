@@ -22,11 +22,11 @@ const ControlBtn = styled.button`
 
 export default function Controls(props) {
   return (
-    <BtnGroup>
-      <ControlBtn onClick={(e) => {}}>Left</ControlBtn>
-      <ControlBtn onClick={(e) => {}}>Right</ControlBtn>
-      <ControlBtn onClick={(e) => {}}>Rotate</ControlBtn>
-      <ControlBtn onClick={(e) => {}}>Down</ControlBtn>
-    </BtnGroup>
+    <div className='controls'>
+      <button className='control-btn' onClick={(e) => {}}>Left</button>
+      <button className='control-btn' onClick={(e) => {}}>Right</button>
+      <button className='control-btn' onClick={(e) => {}}>Rotate</button>
+      <button className='control-btn' onClick={(e) => {}}>Down</button>
+    </div>
     )
 }
