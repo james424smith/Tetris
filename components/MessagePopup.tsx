@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useSelector } from 'react-redux';
 
 const MsgPopupWrapper = styled.div`
   position: absolute;
@@ -14,10 +15,23 @@ const MsgPopupWrapper = styled.div`
 
 // Displays a message
 export default function MessagePopup(props) {
+  const isRunning = useSelector((state) => state.game.isRunning)
+  const gameOver = useSelector((state) => state.game.gameOver)
+
+  let message = ''
+  let isHidden = 'hidden'
+
+  if (gameOver) {
+    message = 'Game Over'
+    isHidden = ''
+  } else if (!isRunning) {
+    message = 'Paused'
+    isHidden = ''
+  }
+
   return (
-    <div className='msgBox'>
-      <h1>Message Title</h1>
-      <p>Message info...</p>
+    <div className={`message-popup ${isHidden}`}>
+      <h1>{message}</h1>
     </div>
   )
 }
