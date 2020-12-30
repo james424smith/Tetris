@@ -12,10 +12,11 @@ const GridWrapper = styled.div`
   border-top-color: var(--border-top-color);
   border-right-color: var(--border-right-color);
   border-bottom-color: var(--border-bottom-color);
-  color: ${props => props.color};
 `;
 
 export default function GridSquare(props) {
+  console.log('GridSquare: ' + props.color);
   const classes = `grid-square color-${props.color}`
+  console.log('classes: ' + classes);
   return <div className={classes}></div>
 }
