@@ -30,8 +30,8 @@ export default function MessagePopup(props) {
   }
 
   return (
-    <div className={`message-popup ${isHidden}`}>
+    <MsgPopupWrapper className={`message-popup ${isHidden}`}>
       <h1>{message}</h1>
-    </div>
+    </MsgPopupWrapper>
   )
 }
